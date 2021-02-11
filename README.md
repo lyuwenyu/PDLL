@@ -2,6 +2,40 @@
 > Python Deep Learning Library, including autograd, nn modules, optimizer, .etc.
 
 --- 
+## DOCS
+    - [ ] TODO
+
+
+## CODE
+```
+.
+├── backend
+│   └── tensor
+├── autograd
+│   ├── variable
+│   ├── function
+│   ├── operator
+│   ├── creation
+│   └── utils
+├── nn
+│   ├── parameter
+│   ├── module
+│   ├── functional
+│   ├── dense
+│   ├── activation
+│   ├── convolution
+│   ├── pooling
+│   ├── loss
+│   └── utils
+├── optim
+│   ├── lr_scheduler
+│   └── optimizer
+└── utils
+    ├── dataset
+    ├── dataloader
+    └── serializable
+```
+
 
 ## TODO
 
@@ -54,33 +88,3 @@
     - [ ] save
     - [ ] load
 
-
-## CODE
-```
-.
-├── backend
-│   └── tensor
-├── autograd
-│   ├── variable
-│   ├── function
-│   ├── operator
-│   ├── creation
-│   └── utils
-├── nn
-│   ├── parameter
-│   ├── module
-│   ├── functional
-│   ├── dense
-│   ├── activation
-│   ├── convolution
-│   ├── pooling
-│   ├── loss
-│   └── utils
-├── optim
-│   ├── lr_scheduler
-│   └── optimizer
-└── utils
-    ├── dataset
-    ├── dataloader
-    └── serializable
-```
