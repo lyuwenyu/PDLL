@@ -66,8 +66,8 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
             - [x] tanh
             - [x] sigmoid
         - [x] softmax
-        - [ ] dropout
-    - [ ] loss
+        - [x] dropout
+    - [x] loss
         - [x] mse
         - [x] cross entropy
 - [x] optim
