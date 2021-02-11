@@ -1,5 +1,5 @@
-# PDLL
-> Python Deep Learning Library, including autograd, nn modules, optimizer, .etc.
+# PDLL (Python Deep Learning Library)
+> including autograd, nn modules, optimizer, .etc.
 
 --- 
 ## DOCS
