@@ -3,10 +3,10 @@
 
 --- 
 ## DOCS
-    - [ ] TODO
+- [ ] TODO
 
 
-## CODE
+## DEMO
 
 ```python
 In [11]: import pdll as L
@@ -99,7 +99,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
 │   ├── parameter
 │   ├── module
 │   ├── functional
-│   ├── dense
+│   ├── linear
 │   ├── activation
 │   ├── convolution
 │   ├── pooling
