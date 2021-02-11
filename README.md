@@ -42,7 +42,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
     - [x] engine
         - [x] backward propagation
     - [x] variable
-        - [x] +, -, *, /, **, @, slice
+        - [x] +, -, *, /, **, log, @, slice
         - [x] broadcasting
         - [x] reshape, transpose
         - [x] sum, mean, var
@@ -52,7 +52,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
             - [x] from_numpy
 - [x] nn
     - [x] parameter
-    - [ ] modules
+    - [x] modules
         - [x] dense
         - [x] bn2d
         - [x] conv2d
@@ -70,8 +70,8 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
     - [ ] loss
         - [x] mse
         - [x] cross entropy
-- [ ] optim
-    - [ ] optimizer
+- [x] optim
+    - [x] optimizer
         - [x] sgd
         - [ ] adam
     - [ ] lr_scheduler
