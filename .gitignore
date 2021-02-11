@@ -1,0 +1,7 @@
+*build
+*dist
+*info
+*cache*
+*vscode*
+*pycache*
+*.ipynb_checkpoints*
