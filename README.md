@@ -50,6 +50,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
             - [x] rand, randn
             - [x] ones, zeros, *_like
             - [x] from_numpy
+        - [] inspace
 - [x] nn
     - [x] parameter
     - [x] modules
