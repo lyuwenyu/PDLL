@@ -6,7 +6,7 @@
 - [ ] TODO
 
 
-## DEMO
+## CODE
 
 ```python
 In [11]: import pdll as L
