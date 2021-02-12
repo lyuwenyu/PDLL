@@ -14,25 +14,6 @@ from torchvision import datasets, transforms
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5, 1)
-        self.conv2 = nn.Conv2d(20, 50, 5, 1)
-        self.fc1 = nn.Linear(4*4*50, 500)
-        self.fc2 = nn.Linear(500, 10)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        x = F.max_pool2d(x, 2, 2)
-        x = F.relu(self.conv2(x))
-        x = F.max_pool2d(x, 2, 2)
-        x = x.reshape(-1, 4*4*50)
-        x = F.relu(self.fc1(x))
-        x = self.fc2(x)
-        return x
-
-
-class Net1(nn.Module):
-    def __init__(self):
-        super(Net1, self).__init__()
         self.conv1 = nn.Conv2d(1, 32, 3, 2, 1)
         self.bn1 = nn.BatchNorm2d(32)
         self.conv2 = nn.Conv2d(32, 64, 3, 2, 1)
@@ -67,6 +48,8 @@ def train(args, model, train_loader, optimizer, epoch):
 
         optimizer.zero_grad()
         loss.backward()
+
+        # TODO  
         # optimizer.step()
 
         for p in model.parameters():
@@ -84,10 +67,11 @@ def test(model, test_loader):
     correct = 0
     for data, target in test_loader:
         data = L.from_numpy(data.data.numpy())
+        target = L.from_numpy(target.data.numpy())
 
         output = model(data)
-        pred = output.data.argmax(dim=1)
-        correct += (pred == target).sum()
+
+        correct += (output.data.argmax(axis=1) == target.data).sum()
 
     print('\nAccuracy: {}/{} ({:.0f}%)\n'.format(correct, len(test_loader.dataset), 100. * correct / len(test_loader.dataset)))
 
@@ -110,7 +94,7 @@ def main():
     train_kwargs = {'batch_size': args.batch_size, 'shuffle': True}
     test_kwargs = {'batch_size': args.test_batch_size}
 
-    model = Net1()
+    model = Net()
 
     transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))])
     dataset1 = datasets.MNIST('../data', train=True, download=False, transform=transform)
