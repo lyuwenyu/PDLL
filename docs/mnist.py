@@ -48,12 +48,7 @@ def train(args, model, train_loader, optimizer, epoch):
 
         optimizer.zero_grad()
         loss.backward()
-
-        # TODO  
         optimizer.step()
-
-        # for p in model.parameters():
-        #     p.data[...] -= p.grad * args.lr
 
         if batch_idx % args.log_interval == 0:
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
@@ -83,10 +78,12 @@ def main():
                         help='input batch size for training (default: 64)')
     parser.add_argument('--test-batch-size', type=int, default=100, metavar='N',
                         help='input batch size for testing (default: 1000)')
-    parser.add_argument('--epochs', type=int, default=10, metavar='N',
+    parser.add_argument('--epochs', type=int, default=5, metavar='N',
                         help='number of epochs to train (default: 14)')
     parser.add_argument('--lr', type=float, default=0.01, metavar='LR',
                         help='learning rate (default: 0.01)')
+    parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
+                        help='momentum (default: 0.9)')
     parser.add_argument('--log-interval', type=int, default=5, metavar='N',
                         help='how many batches to wait before logging training status')
     args = parser.parse_args()
@@ -104,8 +101,8 @@ def main():
 
     print(len(list(model.parameters())))
 
-    optimizer = optim.SGD(model.parameters(), lr=args.lr)
-    scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[3, 8])
+    optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
+    scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[2, 4])
 
     for epoch in range(1, args.epochs + 1):
         train(args, model, train_loader, optimizer, epoch)
