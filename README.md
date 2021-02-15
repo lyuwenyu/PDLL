@@ -74,8 +74,11 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
 - [x] optim
     - [x] optimizer
         - [x] sgd
+            - [x] momentum
+            - [x] nesterov
         - [ ] adam
-    - [ ] lr_scheduler
+    - [x] lr_scheduler
+        - [x] miles stones
 - [ ] data
     - [ ] dataset
     - [ ] dataloader
