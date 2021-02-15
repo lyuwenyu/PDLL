@@ -145,8 +145,8 @@ class Testing(unittest.TestCase):
             np.testing.assert_almost_equal(v.grad, t.grad.numpy(), decimal=4)
 
             buffers = list(m_t.buffers())
-            np.testing.assert_almost_equal(m_l.running_mean, buffers[0].data.numpy(), decimal=4)
-            np.testing.assert_almost_equal(m_l.running_var, buffers[1].data.numpy(), decimal=4)
+            np.testing.assert_almost_equal(m_l.running_mean.data, buffers[0].data.numpy(), decimal=4)
+            np.testing.assert_almost_equal(m_l.running_var.data, buffers[1].data.numpy(), decimal=4)
 
 
     def test_softmax(self, ):
