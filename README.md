@@ -3,7 +3,11 @@
 
 --- 
 ## DOCS
-- [ ] TODO
+- [x] mnist
+
+name | performance
+---|---
+[mnist](./docs/mnist.py) | acc=0.99
 
 
 ## CODE
@@ -50,7 +54,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
             - [x] rand, randn
             - [x] ones, zeros, *_like
             - [x] from_numpy
-        - [ ] inspace
+        - [x] inspace ops
 - [x] nn
     - [x] parameter
     - [x] modules
