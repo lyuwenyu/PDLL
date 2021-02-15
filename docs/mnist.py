@@ -50,10 +50,10 @@ def train(args, model, train_loader, optimizer, epoch):
         loss.backward()
 
         # TODO  
-        # optimizer.step()
+        optimizer.step()
 
-        for p in model.parameters():
-            p.data = p.data - p.grad * args.lr
+        # for p in model.parameters():
+        #     p.data[...] -= p.grad * args.lr
 
         if batch_idx % args.log_interval == 0:
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
@@ -78,14 +78,14 @@ def test(model, test_loader):
 
 def main():
     # Training settings
-    parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
+    parser = argparse.ArgumentParser(description='MNIST Example')
     parser.add_argument('--batch-size', type=int, default=64, metavar='N',
                         help='input batch size for training (default: 64)')
     parser.add_argument('--test-batch-size', type=int, default=100, metavar='N',
                         help='input batch size for testing (default: 1000)')
-    parser.add_argument('--epochs', type=int, default=1, metavar='N',
+    parser.add_argument('--epochs', type=int, default=10, metavar='N',
                         help='number of epochs to train (default: 14)')
-    parser.add_argument('--lr', type=float, default=0.001, metavar='LR',
+    parser.add_argument('--lr', type=float, default=0.01, metavar='LR',
                         help='learning rate (default: 0.01)')
     parser.add_argument('--log-interval', type=int, default=5, metavar='N',
                         help='how many batches to wait before logging training status')
@@ -102,10 +102,16 @@ def main():
     train_loader = torch.utils.data.DataLoader(dataset1,**train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
+    print(len(list(model.parameters())))
+
     optimizer = optim.SGD(model.parameters(), lr=args.lr)
+    scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=[3, 8])
+
     for epoch in range(1, args.epochs + 1):
         train(args, model, train_loader, optimizer, epoch)
         test(model, test_loader)
+        scheduler.step()
+        print(epoch, optimizer.lr)
 
 if __name__ == '__main__':
     main()
