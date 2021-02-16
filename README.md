@@ -1,8 +1,8 @@
-# PDLL📖
+# PDLL😊
 > including autograd, nn modules, optimizer, .etc.
 
 --- 
-## DOCS
+## DOCS📖
 - [x] mnist
 
 name | performance
@@ -10,7 +10,7 @@ name | performance
 [mnist](./docs/mnist.py) | acc=0.99
 
 
-## CODE
+## CODES💻
 
 ```python
 In [11]: import pdll as L
