@@ -25,6 +25,9 @@
     - [x] modules
         - [x] dense
         - [x] bn2d
+            - [x] running_mean/var
+            - [x] training
+            - [x] eval
         - [x] conv2d
             - [x] group
             - [x] dilation

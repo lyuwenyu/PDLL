@@ -56,6 +56,9 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
     - [x] modules
         - [x] dense
         - [x] bn2d
+            - [x] running_mean/var
+            - [x] training
+            - [x] eval
         - [x] conv2d
             - [x] group
             - [x] dilation
