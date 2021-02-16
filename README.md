@@ -10,7 +10,7 @@ name | performance
 [mnist](./docs/mnist.py) | acc=0.99
 
 
-## CODES💻
+## CODE💻
 
 ```python
 In [11]: import pdll as L
@@ -28,7 +28,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
 
 ```
 
-## DONE
+## DONE🔨
 
 - [x] backend
     - [x] numpy
