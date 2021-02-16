@@ -38,8 +38,8 @@
         - [x] softmax
         - [x] dropout
         - [ ] serialization
-            - state_dict
-            - load_state_dict
+            - [ ] state_dict
+            - [ ] load_state_dict
     - [x] loss
         - [x] mse
         - [x] cross entropy
