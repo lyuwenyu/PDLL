@@ -28,7 +28,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
 
 ```
 
-## TODO
+## DONE
 
 - [x] backend
     - [x] numpy
@@ -39,15 +39,18 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
     - [x] engine
         - [x] backward propagation
     - [x] variable
-        - [x] +, -, *, /, **, log, @, slice
+        - [x] +, -, *, /, **, log, @
+        - [x] slice
         - [x] broadcasting
         - [x] reshape, transpose
         - [x] sum, mean, var
         - [x] creation
             - [x] rand, randn
             - [x] ones, zeros, *_like
+            - [x] eye
             - [x] from_numpy
         - [x] inspace ops
+            - [x] sub_, add_, mul_, zeros_
 - [x] nn
     - [x] parameter
     - [x] modules
@@ -73,13 +76,12 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
         - [x] sgd
             - [x] momentum
             - [x] nesterov
-        - [ ] adam
     - [x] lr_scheduler
         - [x] miles stones
-- [ ] data
-    - [ ] dataset
-    - [ ] dataloader
-- [ ] serializable
-    - [ ] save
-    - [ ] load
+- [x] data
+    - [x] dataset
+    - [x] dataloader
+- [x] serializable
+    - [x] save
+    - [x] load
 
