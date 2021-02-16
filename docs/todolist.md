@@ -37,6 +37,9 @@
             - [x] sigmoid
         - [x] softmax
         - [x] dropout
+        - [ ] serialization
+            - state_dict
+            - load_state_dict
     - [x] loss
         - [x] mse
         - [x] cross entropy
@@ -45,8 +48,10 @@
         - [x] sgd
             - [x] momentum
             - [x] nesterov
+        - [ ] adam
     - [x] lr_scheduler
         - [x] miles stones
+        - [ ] exp
 - [x] data
     - [x] dataset
     - [x] dataloader
