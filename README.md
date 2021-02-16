@@ -45,10 +45,9 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
         - [x] reshape, transpose
         - [x] sum, mean, var
         - [x] creation
-            - [x] rand, randn
-            - [x] ones, zeros, *_like
-            - [x] eye
             - [x] from_numpy
+            - [x] rand, randn
+            - [x] eye, ones, zeros, *_like
         - [x] inspace ops
             - [x] sub_, add_, mul_, zeros_
 - [x] nn
@@ -57,8 +56,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
         - [x] dense
         - [x] bn2d
             - [x] running_mean/var
-            - [x] training
-            - [x] eval
+            - [x] training/eval
         - [x] conv2d
             - [x] group
             - [x] dilation
