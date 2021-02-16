@@ -64,7 +64,7 @@ def test(model, test_loader):
     model.eval()
 
     correct = 0
-    for data, target in test_loader:
+    for data, label in test_loader:
         # data = L.from_numpy(data.data.numpy())
         # target = L.from_numpy(target.data.numpy())
         data = L.from_numpy(np.array(data))
@@ -84,7 +84,7 @@ def main():
     parser = argparse.ArgumentParser(description='MNIST Example')
     parser.add_argument('--batch-size', type=int, default=64, metavar='N',
                         help='input batch size for training (default: 64)')
-    parser.add_argument('--test-batch-size', type=int, default=100, metavar='N',
+    parser.add_argument('--test-batch-size', type=int, default=1000, metavar='N',
                         help='input batch size for testing (default: 1000)')
     parser.add_argument('--epochs', type=int, default=5, metavar='N',
                         help='number of epochs to train (default: 14)')
