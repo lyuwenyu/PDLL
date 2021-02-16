@@ -1,0 +1,56 @@
+
+
+## TODO
+
+- [x] backend
+    - [x] numpy
+- [x] autograd
+    - [x] function
+        - [x] forward
+        - [x] backward
+    - [x] engine
+        - [x] backward propagation
+    - [x] variable
+        - [x] +, -, *, /, **, log, @, slice
+        - [x] broadcasting
+        - [x] reshape, transpose
+        - [x] sum, mean, var
+        - [x] creation
+            - [x] rand, randn
+            - [x] ones, zeros, *_like
+            - [x] from_numpy
+        - [x] inspace ops
+- [x] nn
+    - [x] parameter
+    - [x] modules
+        - [x] dense
+        - [x] bn2d
+        - [x] conv2d
+            - [x] group
+            - [x] dilation
+        - [x] pooling2d
+            - [x] avg
+            - [x] max
+        - [x] activation
+            - [x] relu
+            - [x] tanh
+            - [x] sigmoid
+        - [x] softmax
+        - [x] dropout
+    - [x] loss
+        - [x] mse
+        - [x] cross entropy
+- [x] optim
+    - [x] optimizer
+        - [x] sgd
+            - [x] momentum
+            - [x] nesterov
+    - [x] lr_scheduler
+        - [x] miles stones
+- [x] data
+    - [x] dataset
+    - [x] dataloader
+- [x] serializable
+    - [x] save
+    - [x] load
+
