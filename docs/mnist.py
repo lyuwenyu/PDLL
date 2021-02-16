@@ -92,6 +92,9 @@ def main():
     test_kwargs = {'batch_size': args.test_batch_size}
 
     model = Net()
+    L.io.save(model, '../data/mnist.pickle')
+    del model
+    model = L.io.load('../data/mnist.pickle')
 
     transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))])
     dataset1 = datasets.MNIST('../data', train=True, download=False, transform=transform)
