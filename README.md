@@ -7,7 +7,7 @@
 
 name | performance
 ---|---
-[mnist](./docs/mnist.py) | acc=0.99
+[mnist](./examples/mnist.py) | acc=0.99
 
 
 ## CODE💻
