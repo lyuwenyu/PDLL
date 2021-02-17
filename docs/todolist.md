@@ -1,6 +1,5 @@
 
-
-## TODO
+## DONE🔨
 
 - [x] backend
     - [x] numpy
@@ -11,23 +10,24 @@
     - [x] engine
         - [x] backward propagation
     - [x] variable
-        - [x] +, -, *, /, **, log, @, slice
+        - [x] +, -, *, /, **, log, @
+        - [x] slice
         - [x] broadcasting
         - [x] reshape, transpose
         - [x] sum, mean, var
         - [x] creation
-            - [x] rand, randn
-            - [x] ones, zeros, *_like
             - [x] from_numpy
+            - [x] rand, randn
+            - [x] eye, ones, zeros, *_like
         - [x] inspace ops
+            - [x] sub_, add_, mul_, zeros_
 - [x] nn
     - [x] parameter
     - [x] modules
-        - [x] dense
+        - [x] linear
         - [x] bn2d
             - [x] running_mean/var
-            - [x] training
-            - [x] eval
+            - [x] training/eval
         - [x] conv2d
             - [x] group
             - [x] dilation
@@ -38,11 +38,11 @@
             - [x] relu
             - [x] tanh
             - [x] sigmoid
+        - [x] padding
+            - [x] pad2d, 
+            - [x] zero, constant
         - [x] softmax
         - [x] dropout
-        - [ ] serialization
-            - [ ] state_dict
-            - [ ] load_state_dict
     - [x] loss
         - [x] mse
         - [x] cross entropy
@@ -51,10 +51,8 @@
         - [x] sgd
             - [x] momentum
             - [x] nesterov
-        - [ ] adam
     - [x] lr_scheduler
         - [x] miles stones
-        - [ ] exp
 - [x] data
     - [x] dataset
     - [x] dataloader

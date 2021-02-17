@@ -1,4 +1,7 @@
 
+## MNIST LOGS
+
+```
 SGD logs:
 
 Train Epoch: 4 [58240/60000 (97%)]      Loss: 0.037137
@@ -48,3 +51,5 @@ Train Epoch: 5 [59520/60000 (99%)]      Loss: 0.007509
 Train Epoch: 5 [59840/60000 (100%)]     Loss: 0.006728
 
 Accuracy: 9897/10000 (99%)
+
+```
