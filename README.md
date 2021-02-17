@@ -53,7 +53,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
 - [x] nn
     - [x] parameter
     - [x] modules
-        - [x] dense
+        - [x] linear
         - [x] bn2d
             - [x] running_mean/var
             - [x] training/eval
@@ -67,6 +67,9 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
             - [x] relu
             - [x] tanh
             - [x] sigmoid
+        - [x] padding
+            - [x] pad2d, 
+            - [x] zero, constant
         - [x] softmax
         - [x] dropout
     - [x] loss
