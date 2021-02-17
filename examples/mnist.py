@@ -88,8 +88,8 @@ def main():
                         help='how many batches to wait before logging training status')
     args = parser.parse_args()
 
-    train_kwargs = {'batch_size': args.batch_size, 'shuffle': True}
-    test_kwargs = {'batch_size': args.test_batch_size, 'shuffle': False}
+    train_kwargs = {'batch_size': args.batch_size, 'shuffle': True, 'num_workers': 8}
+    test_kwargs = {'batch_size': args.test_batch_size, 'shuffle': False, 'num_workers': 8}
 
     model = Net()
     L.io.save(model, '../data/mnist.pickle')
