@@ -7,9 +7,6 @@ import pdll.nn as nn
 import pdll.optim as optim
 import pdll.nn.functional as F
 
-# import torch
-# from torchvision import datasets, transforms
-
 
 class Net(nn.Module):
     def __init__(self):
@@ -39,9 +36,6 @@ def train(args, model, train_loader, optimizer, epoch):
 
     for _idx, (data, label) in enumerate(train_loader):
 
-        # data = L.from_numpy(data.data.numpy())
-        # label = label.data.numpy()
-
         data = L.from_numpy(np.array(data))
         label = np.array(label)
         label = L.Variable(np.eye(10)[label])
@@ -66,13 +60,11 @@ def test(model, test_loader):
     correct = 0
     for data, label in test_loader:
         # data = L.from_numpy(data.data.numpy())
-        # target = L.from_numpy(target.data.numpy())
         data = L.from_numpy(np.array(data))
         label = np.array(label)
         
         output = model(data)
 
-        # correct += (output.data.argmax(axis=1) == target.data).sum()
         correct += (output.data.argmax(axis=1) == label).sum()
 
 
@@ -96,25 +88,19 @@ def main():
                         help='how many batches to wait before logging training status')
     args = parser.parse_args()
 
+    train_kwargs = {'batch_size': args.batch_size, 'shuffle': True}
+    test_kwargs = {'batch_size': args.test_batch_size, 'shuffle': False}
 
     model = Net()
     L.io.save(model, '../data/mnist.pickle')
     del model
     model = L.io.load('../data/mnist.pickle')
 
-    # train_kwargs = {'batch_size': args.batch_size, 'shuffle': True}
-    # test_kwargs = {'batch_size': args.test_batch_size}
-    # transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.1307,), (0.3081,))])
-    # dataset1 = datasets.MNIST('../data', train=True, download=False, transform=transform)
-    # dataset2 = datasets.MNIST('../data', train=False, transform=transform)
-    # train_loader = torch.utils.data.DataLoader(dataset1,**train_kwargs)
-    # test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
+    train_dataset = L.io.dataset.MNIST(root='../data/MNIST/raw/', train=True)
+    test_dataset = L.io.dataset.MNIST(root='../data/MNIST/raw/', train=False)
 
-    train_dataset = L.io.dataset.MNIST(train=True)
-    test_dataset = L.io.dataset.MNIST(train=False)
-
-    train_loader = L.io.DataLoader(train_dataset, batch_size=64, shuffle=True)
-    test_loader = L.io.DataLoader(test_dataset, batch_size=1000, shuffle=False)
+    train_loader = L.io.DataLoader(train_dataset, **train_kwargs)
+    test_loader = L.io.DataLoader(test_dataset, **test_kwargs)
 
     print(len(list(model.parameters())))
 
