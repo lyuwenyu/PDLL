@@ -1,16 +1,8 @@
 # PDLL😊
 > including autograd, nn modules, optimizer, .etc.
 
---- 
-## DOCS📖
-- [x] mnist
 
-name | performance
----|---
-[mnist](./examples/mnist.py) | acc=0.99
-
-
-## CODE💻
+## Getting Started
 
 ```python
 In [11]: import pdll as L
@@ -27,3 +19,31 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
        [4.80345563, 3.93464588, 3.48897623, 3.76960884]])
 
 ```
+
+## Examples
+
+- [examples](./examples/)
+
+Name | Performance
+---|---
+[mnist](./examples/mnist.py) | acc=0.99
+
+
+## About PDLL
+
+PDLL is a python deep learning library.
+
+Module | Description
+---|---
+[pdll.backend]() | a tensor library, like numpy or others.
+[pdll.autograd]() | an automatic differentiation library, that record operations on variable type. 
+[pdll.nn]() | a neural network library based on autograd
+[pdll.optim]() | an optimizer library for deep learning
+[pdll.io]() | dataset, dataloader and serialization
+
+---
+To learn more about contributing to PDLL, please contact me.
+
+## About Me
+ - email
+ - 
