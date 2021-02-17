@@ -18,13 +18,12 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
        [5.25936306, 6.63004188, 6.32281295, 6.94581515],
        [4.80345563, 3.93464588, 3.48897623, 3.76960884]])
 ```
---- 
+
 - [More Examples](./examples/)
 
 Name | Performance | Commits 
 ---|---|---
 [mnist](./examples/mnist.py) | acc=0.99 | an exmaple midified from pytorch mnist, but with new network achitecture.
----
 
 ## About PDLL
 
@@ -38,7 +37,6 @@ Module | Description
 [pdll.optim]() | an optimizer library for deep learning
 [pdll.io]() | dataset, dataloader and serialization
 
----
 To learn more about contributing to PDLL, please contact me.
 
 ## About Me
