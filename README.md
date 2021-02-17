@@ -23,7 +23,7 @@ array([[5.47649723, 8.3762083 , 7.68493488, 9.39777235],
 
 Name | Performance | Commits 
 ---|---|---
-[mnist](./examples/mnist.py) | acc=0.99 | an exmaple midified from pytorch mnist, but with new network achitecture.
+[mnist](./examples/mnist.py) | acc=0.99 | an exmaple midified from pytorch [mnist](https://github.com/pytorch/examples/tree/master/mnist), but with new network achitecture.
 
 ## About PDLL
 
