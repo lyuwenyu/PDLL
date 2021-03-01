@@ -28,6 +28,7 @@
         - [x] bn2d
             - [x] running_mean/var
             - [x] training/eval
+        - [x] gn2d
         - [x] conv2d
             - [x] group
             - [x] dilation
@@ -43,6 +44,9 @@
             - [x] zero, constant
         - [x] softmax
         - [x] dropout
+        - [x] attention
+            - [x] multi-head
+            - [x] self-attention
     - [x] loss
         - [x] mse
         - [x] cross entropy
