@@ -29,7 +29,7 @@ Tensor([[[0.71458999 0.87984239 0.73015823]
 
 Name | Performance | Commits 
 ---|---|---
-[mnist](./examples/mnist.py) | acc=0.99 | an exmaple midified from pytorch [mnist](https://github.com/pytorch/examples/tree/master/mnist), but with new network achitecture.
+[mnist](./examples/mnist.py) | acc=0.99 | an exmaple modified from pytorch [mnist](https://github.com/pytorch/examples/tree/master/mnist), but with new network achitecture.
 
 ## About PDLL
 
