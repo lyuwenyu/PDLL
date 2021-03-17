@@ -33,7 +33,7 @@ Name | Performance | Commits
 
 ## About PDLL
 
-PDLL is a python deep learning library.
+PDLL is a python deep learning library. Details in [achitecture](./docs/achitecture.md).
 
 Module | Description
 ---|---
@@ -42,7 +42,7 @@ Module | Description
 [pdll.nn]() | a neural network library based on autograd
 [pdll.optim]() | an optimizer library for deep learning
 [pdll.io]() | dataset, dataloader and serialization
-|
+
 
 To learn more about contributing to PDLL, please contact me.
 
