@@ -33,7 +33,7 @@ Name | Performance | Commits
 
 ## About PDLL
 
-PDLL is a python deep learning library. To see details in [achitecture](./docs/achitecture.md).
+PDLL is a python deep learning library. To see details in [achitecture](./docs/achitecture.md) and [done-list](./docs/todolist.md).
 
 Module | Description
 ---|---
