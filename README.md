@@ -1,5 +1,5 @@
 # PDLL😊
-PDLL's mission is to build a backend agnostic python deep learning framework, pluging and playing for different numpy-like computing engines.
+PDLL's mission is to build a backend agnostic python deep learning framework for education, pluging and playing for different numpy-like computing engines.
 Which including autograd, nn modules, optimizer, io, .etc.
 
 ## Getting Started
