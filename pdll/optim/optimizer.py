@@ -30,12 +30,6 @@ class SGD(_Optimizer):
     def step(self, ):        
         # _params should not be generator. After loop, none
         for i, p in enumerate(self.params):
-            # if not self.nesterov:
-            #     self.velocity[i] = self.momentum * self.velocity[i] + p.grad
-            #     p.data[...] = p.data - self.lr * self.velocity[i]
-            # else:
-            #     self.velocity[i] = self.momentum * self.velocity[i] + self.lr * p.grad
-            #     p.data[...] = p.data - self.velocity[i]
             self.velocity[i] = self.momentum * self.velocity[i] + (self.lr if self.velocity else 1.0) * p.grad.storage
             p.storage[...] = p.storage - (1.0 if self.velocity else self.lr) * self.velocity[i]
             
