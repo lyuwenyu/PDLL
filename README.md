@@ -1,5 +1,5 @@
 # PDLL😊
-PDLL's mission is to build a backend agnostic python deep learning framework for education, pluging and playing for different numpy-like computing engines.
+PDLL's mission is to build a backend-agnostic python deep learning framework for education, pluging and playing for different numpy-like computing engines.
 It includes autograd, nn modules, optimizer, io, .etc.
 
 ## Getting Started
@@ -33,7 +33,7 @@ Name | Performance | Commits
 
 ## About PDLL
 
-PDLL is a python deep learning library. To see details in [achitecture](./docs/achitecture.md) and [done-list](./docs/todolist.md).
+PDLL is a python deep learning library. To see details in [achitecture](./docs/achitecture.md) and [todo-list](./docs/todolist.md).
 
 Module | Description
 ---|---
