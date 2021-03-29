@@ -1,0 +1,23 @@
+// python -m grpc_tools.protoc -I./ --python_out=. --grpc_python_out=. ./helloworld.proto
+
+syntax = "proto3";
+
+
+message DataType {
+  INT = 0;
+  BOOL = 1;
+  FLOAT = 2;
+}
+
+message Storage {
+  bytes data = 1;
+  int32 ndim = 2;
+  repeated int32 shape = 3;
+  repeated int32 strides = 4;
+  int32 size = 5;
+  
+}
+
+
+
+// https://numpy.org/doc/stable/reference/arrays.ndarray.html
