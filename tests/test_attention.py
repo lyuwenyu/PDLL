@@ -29,7 +29,8 @@ class Testing(unittest.TestCase):
         dl = L.from_numpy(data[...], requires_grad=True)
         ml = L.nn.MultiHeadAttention(16, 4)
 
-        ml.in_proj_weight.storage[...] = mt.in_proj_weight.data.numpy()
+        ws = torch.cat([x.t() for x in mt.in_proj_weight.data.chunk(3)], dim=0)
+        ml.in_proj_weight.storage[...] = ws.numpy()
         ml.in_proj_bias.storage[...] = mt.in_proj_bias.data.numpy()
         ml.out_proj.weight.storage[...] = mt.out_proj.weight.data.t().numpy()
         ml.out_proj.bias.storage[...] = mt.out_proj.bias.data.numpy()

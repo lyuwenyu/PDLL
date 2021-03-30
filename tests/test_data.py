@@ -16,7 +16,7 @@ class Testing(unittest.TestCase):
                 self.data = np.arange(100)
 
             def __getitem__(self, idx):
-                time.sleep(0.1)
+                time.sleep(0.001)
                 return self.data[idx]
 
             def __len__(self, ):
@@ -41,14 +41,12 @@ class Testing(unittest.TestCase):
 
 
 
-    def test_dataset(self, ):
-        
-        mnist = L.io.dataset.MNIST(train=False)
-        print('dataloader: ', mnist[0][0].shape)
-        dataloader = L.io.DataLoader(mnist, batch_size=5000)
-
-        for i, data in enumerate(dataloader):
-            print(i, len(data), len(data[1]), np.array(data[0]).shape)
+    # def test_mnist(self, ):
+    #     mnist = L.io.dataset.MNIST(train=False)
+    #     print('dataloader: ', mnist[0][0].shape)
+    #     dataloader = L.io.DataLoader(mnist, batch_size=5000)
+    #     for i, data in enumerate(dataloader):
+    #         print(i, len(data), len(data[1]), np.array(data[0]).shape)
 
 
 if __name__ == '__main__':

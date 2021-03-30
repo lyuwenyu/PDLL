@@ -18,8 +18,8 @@ class Testing(unittest.TestCase):
             ot.mean().backward()
             ov.mean().backward()
 
-            np.testing.assert_almost_equal(ov.data, ot.data.numpy())
-            np.testing.assert_almost_equal(v.grad, t.grad.data.numpy())
+            np.testing.assert_almost_equal(ov.data.numpy(), ot.data.numpy())
+            np.testing.assert_almost_equal(v.grad.numpy(), t.grad.data.numpy())
 
 
     def test_zeropadding_module(self, ):
@@ -33,8 +33,8 @@ class Testing(unittest.TestCase):
             ot.mean().backward()
             ov.mean().backward()
 
-            np.testing.assert_almost_equal(ov.data, ot.data.numpy())
-            np.testing.assert_almost_equal(v.grad, t.grad.data.numpy())
+            np.testing.assert_almost_equal(ov.data.numpy(), ot.data.numpy())
+            np.testing.assert_almost_equal(v.grad.numpy(), t.grad.data.numpy())
 
 
     def test_constantpadding_module(self, ):
@@ -48,8 +48,8 @@ class Testing(unittest.TestCase):
             ot.mean().backward()
             ov.mean().backward()
 
-            np.testing.assert_almost_equal(ov.data, ot.data.numpy())
-            np.testing.assert_almost_equal(v.grad, t.grad.data.numpy())
+            np.testing.assert_almost_equal(ov.data.numpy(), ot.data.numpy())
+            np.testing.assert_almost_equal(v.grad.numpy(), t.grad.data.numpy())
         
 
 if __name__ == '__main__':
