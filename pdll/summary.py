@@ -2,7 +2,7 @@
 # Params
 # FLOPs
 
-import pdll
+import pdll as L 
 
 totle_num = 0
 
@@ -42,10 +42,10 @@ def _linear_hook(layer, inputs, output):
 
 
 hooks = {
-    pdll.nn.Conv2d : _conv2d_hook,
-    pdll.nn.Linear : _linear_hook,
-    pdll.nn.BatchNorm2d : _bn2d_hook,
-    pdll.nn.ReLU : _relu_hook,
+    L.nn.Conv2d : _conv2d_hook,
+    L.nn.Linear : _linear_hook,
+    L.nn.BatchNorm2d : _bn2d_hook,
+    L.nn.ReLU : _relu_hook,
     
 }
 
@@ -57,8 +57,8 @@ def register_hook(model):
     for m in model.sublayers():
         if type(m) in hooks:
             m.register_forward_post_hook( hooks[type(m)] )
-            m.register_buffer('op_num', pdll.zeros(1, dtype='float32'))
-        elif type(m) in (pdll.nn.Sequential, ):
+            m.register_buffer('op_num', L.zeros(1, dtype='float32'))
+        elif type(m) in (L.nn.Sequential, ):
             pass
         else:
             print(f'do not support {type(m)}')
